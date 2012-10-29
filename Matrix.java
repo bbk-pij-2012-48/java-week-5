@@ -67,7 +67,19 @@ public class Matrix{
 				}
 			}
 		}
-
 		return output;
+	}
+	
+	public void setMatrix(String input){					// sets matrix from string like "1,2,3;4,5,6;7,8,9"
+		matrix = null;
+		String[] rowValues = input.split("\\;");
+		String[] splitRowValues = rowValues[0].split("\\,");
+		matrix = new int[rowValues.length][splitRowValues.length];
+		for(int i=0 ; i<rowValues.length ; i++){
+			splitRowValues = rowValues[i].split("\\,");
+			for(int j=0 ; j<splitRowValues.length ; j++){
+				matrix[i][j] = Integer.parseInt(splitRowValues[j]);
+			}
+		}
 	}
 }
