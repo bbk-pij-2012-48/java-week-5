@@ -30,17 +30,13 @@ public class Matrix{
 	}
 	
 	public void setRow(int row, String value){
-		if(row<matrix.length){ 				// valid row reference
-			int commaCount = 0;
-			for(int i=0 ; i<value.length() ; i++){
-				if(value.charAt(i)==',')
-					commaCount++;
+		if(row<matrix.length){ 				   // valid row reference
+			String[] valueArray = value.split("\\,");
+			if(valueArray.length==matrix[0].length){   // valid value string
+				for(int i=0 ; i<matrix[0].length ; i++){
+					matrix[row][i] = Integer.parseInt(valueArray[i]);
+				}
 			}
-			if(commaCount==matrix[0].length-1){	// valid value string
-				String[] valueArray = value.split("\\,");
-			}
-			//continue here
 		}
-	}
-			
+	}			
 }
