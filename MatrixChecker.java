@@ -1,5 +1,5 @@
 public class MatrixChecker{
-	public boolean isSymmetrical(int[] src){
+	public static boolean isSymmetrical(int[] src){
 		for (int i=0 ; i<src.length/2 ; i++){
 			if(src[i]!=src[src.length-1-i]){
 				return false;
@@ -8,7 +8,7 @@ public class MatrixChecker{
 		return true;
 	}
 	
-	public boolean isSymmetrical(int[][] src){
+	public static boolean isSymmetrical(int[][] src){
 		if(src.length!=src[0].length){
 			return false;
 		}
@@ -24,7 +24,7 @@ public class MatrixChecker{
 		return true;
 	}
 	
-	public boolean isTriangular(int[][] src){
+	public static boolean isTriangular(int[][] src){
 		for(int j=0 ; j<src[0].length ; j++){
 			for(int i=j+1 ; i<src.length ; i++){
 				if(src[i][j]!=0){
