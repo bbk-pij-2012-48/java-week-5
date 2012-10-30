@@ -82,4 +82,12 @@ public class Matrix{
 			}
 		}
 	}
+	
+	public boolean isSymmetrical(){
+		return MatrixChecker.isSymmetrical(matrix);
+	}
+	
+	public boolean isTriangular(){
+		return MatrixChecker.isTriangular(matrix);
+	}
 }

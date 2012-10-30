@@ -1,5 +1,10 @@
-Matrix tester = new Matrix(2,3);
+Matrix tester = new Matrix(3,3);
 tester.prettyPrint();
+
+if(tester.isSymmetrical())
+	println "This matrix is symmetrical!";
+if(!tester.isTriangular())
+	println "But it's not triangular...";
 
 tester.setElement(0,0,1);
 tester.setElement(0,1,2);
@@ -16,3 +21,5 @@ println tester.toString();
 
 tester.setMatrix("1,2;3,4;5,6");
 tester.prettyPrint();
+
+
