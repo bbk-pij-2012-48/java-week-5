@@ -21,8 +21,8 @@ while(!finished){
 		println gameTarget.fire(target[0],target[1],target[2]);
 		if(gameTarget.fire(target[0],target[1],target[2])==Result.HIT){
 			hit = true;
-			println "Would you like to play again? ";
-			response = System.console.readLine();
+			print "Would you like to play again? ";
+			response = (char)System.console().readLine();
 			if(response=='n'){
 				finished = true;
 			}
