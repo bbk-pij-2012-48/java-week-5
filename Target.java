@@ -27,27 +27,29 @@ public class Target{
 				}
 			}
 		}
+		int[] position = {-1,-1,-1};
+		return position;
 	}
 		
 	public Result fire(int targetX, int targetY, int targetZ){
 		int[] position = this.position();
 		if(targetX>=map.length||targetY>=map.length||targetZ>=map.length
 			||targetX<0||targetY<0||targetZ<0){
-			return Result.OUT\_OF\_RANGE;
+			return Result.OUT_OF_RANGE;
 		}else if(targetX==position[0]&&targetY==position[1]&&targetZ==position[2]){
 			return Result.HIT;
 		}else if(targetX<position[0]){
-			return Result.FAIL\_LEFT;
+			return Result.FAIL_LEFT;
 		}else if(targetX>position[0]){
-			return Result.FAIL\_RIGHT;
+			return Result.FAIL_RIGHT;
 		}else if(targetY<position[1]){
-			return Result.FAIL\_LOW;
+			return Result.FAIL_LOW;
 		}else if(targetY>position[1]){
-			return Result.FAIL\_HIGH;
+			return Result.FAIL_HIGH;
 		}else if(targetZ<position[2]){
-			return Result.FAIL\_SHORT;
-		}else if(targerZ>position[2]){
-		return Result.FAIL\_LONG;
+			return Result.FAIL_SHORT;
+		}else {
+		return Result.FAIL_LONG;
 		}
 	}
 }
