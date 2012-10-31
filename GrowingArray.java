@@ -13,6 +13,8 @@ public class GrowingArray{
 		String[] name2 = new String[name.length*2];
 		System.arraycopy(id, 0, id2, 0, id.length);
 		System.arraycopy(name, 0, name2, 0, name.length);
+		id = id2;
+		name = name2;
 	}
 	
 	public void setId(int elt, int value){
@@ -29,5 +31,9 @@ public class GrowingArray{
 	
 	public String[] getName(){
 		return name;
+	}
+	
+	public int ArrayLength(){
+		return id.length;
 	}
 }
